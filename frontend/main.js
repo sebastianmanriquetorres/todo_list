@@ -1,4 +1,4 @@
-const API = "http://localhost:3000/tasks"; // 🔥 se cambiará a Render después
+const API = "https://todo-list-vxop.onrender.com"; // 🔥 se cambiará a Render después
 
 async function loadTasks() {
   const res = await fetch(API);
