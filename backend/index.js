@@ -4,7 +4,11 @@ const cors = require("cors");
 const pool = require("./db");
 
 const app = express();
-app.use(cors()); // por ahora permite todas las origins; lo restringiremos en prod
+app.use(cors({
+  origin: "https://todo-list-five-eta-65.vercel.app/", 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 app.use(express.json());
 
 // Health
